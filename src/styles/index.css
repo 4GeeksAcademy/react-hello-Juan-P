@@ -1,12 +1,231 @@
+body {
+    background-color: black;
+    background-image: url('https://thumbs.dreamstime.com/b/calle-de-la-ciudad-oto%C3%B1o-con-paso-por-carretera-y-parque-ilustraci%C3%B3n-vectorial-del-cruce-peatonal-en-el-sem%C3%A1foro-peatones-343761516.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
 
-/* 
+.dot, .firstCircle, .secondCircle, .thirdCircle, .rectangle, .rectangle2 {
+    position: absolute;
+    border: 0.2rem solid black;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.dot {
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    margin: 1.5rem auto;
+    z-index: 4;
+}
 
-*/
+.firstCircle { background-color: #472322; }
+.secondCircle { background-color: #6c6a31; }
+.thirdCircle { background-color: #1d6020; }
+
+.rectangle {
+    height: 18rem;
+    width: 6rem;
+    background-color: #555;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    border-radius: 20%;
+}
+
+.rectangle2 {
+    height: 24rem;
+    width: 3.2rem;
+    background-color: #555;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    border-radius: 10%;
+}
+
+/* Media Queries */
+/* iPhone SE pro */
+@media only screen and (max-width: 375px) and (max-height: 667px) {
+    .dot { width: 1.6rem; height: 1.6rem; }
+    .firstCircle { top: 30.5%; left: 57.8%; }
+    .secondCircle { top: 35%; left: 57.8%; }
+    .thirdCircle { top: 39.5%; left: 57.8%; }
+    .rectangle { height: 7rem; width: 2.5rem; top: 32.5%; left: 61%; }
+    .rectangle2 { height: 13rem; width: 1.2rem; top: 34%; left: 61%; }
+}
+
+/* iPhone XR */
+@media only screen and (min-width: 414px) and (min-height: 896px) {
+    .dot { width: 2rem; height: 2rem; }
+    .firstCircle { top: 32%; left: 60%; }
+    .secondCircle { top: 36%; left: 60%; }
+    .thirdCircle { top: 40%; left: 60%; }
+    .rectangle { height: 12.5rem; width: 55rem; top: 32.5%; left: 64%; }
+    .rectangle2 { height: 13rem; width: 1.2rem; top: 40%; left: 64%; }
+}
+
+/* iPhone 12 pro */
+@media only screen and (min-width: 390px) and (min-height: 844px) {
+    .dot { width: 2rem; height: 2rem; }
+    .firstCircle { top: 32%; left: 60%; }
+    .secondCircle { top: 36%; left: 60%; }
+    .thirdCircle { top: 40%; left: 60%; }
+    .rectangle { height: 9.5rem; width: 2.5rem; top: 32.5%; left: 64%; }
+    .rectangle2 { height: 13rem; width: 1.2rem; top: 40%; left: 64%; }
+}
+
+/* iPhone 14 pro max */
+@media only screen and (min-width: 430px) and (min-height: 932px) {
+    .dot { width: 2rem; height: 2rem; }
+    .firstCircle { top: 32%; left: 59.8%; }
+    .secondCircle { top: 36%; left: 59.8%; }
+    .thirdCircle { top: 40%; left: 59.8%; }
+    .rectangle { height: 10rem; width: 2.5rem; top: 32.5%; left: 63.5%; }
+    .rectangle2 { height: 13rem; width: 1.2rem; top: 42.5%; left: 63.5%; }
+}
+
+/* Google Pixel 7 */
+@media only screen and (min-width: 412px) and (min-height: 915px) {
+    .dot { width: 2rem; height: 2rem; }
+    .firstCircle { top: 32%; left: 59.8%; }
+    .secondCircle { top: 36%; left: 59.8%; }
+    .thirdCircle { top: 40%; left: 59.8%; }
+    .rectangle { height: 10rem; width: 2.5rem; top: 32.5%; left: 63.5%; }
+    .rectangle2 { height: 13rem; width: 1.2rem; top: 42.5%; left: 63.5%; }
+}
+
+/* Samsung G8+ */
+@media only screen and (max-width: 360px) and (max-height: 740px) {
+    .dot { width: 1.8rem; height: 1.8rem; }
+    .firstCircle { top: 32%; left: 58.5%; }
+    .secondCircle { top: 36.5%; left: 58.5%; }
+    .thirdCircle { top: 41%; left: 58.5%; }
+    .rectangle { height: 8rem; width: 2.5rem; top: 33%; left: 62.6%; }
+    .rectangle2 { height: 13rem; width: 1.2rem; top: 37%; left: 62.6%; }
+}
+
+/* iPad Mini */
+@media only screen and (min-width: 768px) and (min-height: 1024px) {
+    .dot { width: 2rem; height: 2rem; }
+    .firstCircle { top: 33%; left: 55.8%; }
+    .secondCircle { top: 37%; left: 55.8%; }
+    .thirdCircle { top: 41%; left: 55.8%; }
+    .rectangle { height: 10.5rem; width: 2.8rem; top: 33%; left: 58%; }
+    .rectangle2 { height: 13rem; width: 1.4rem; top: 44.5%; left: 58%; }
+}
+
+/* iPad Air */
+@media only screen and (min-width: 820px) and (min-height: 1180px) {
+    .dot { width: 2.3rem; height: 2.3rem; }
+    .firstCircle { top: 33%; left: 56.75%; }
+    .secondCircle { top: 37%; left: 56.75%; }
+    .thirdCircle { top: 41%; left: 56.75%; }
+    .rectangle { height: 12rem; width: 3rem; top: 33%; left: 59%; }
+    .rectangle2 { height: 13rem; width: 1.6rem; top: 47%; left: 59%; }
+}
+
+/* iPad Pro 12.9" */
+@media only screen and (min-width: 1024px) and (min-height: 1366px) {
+    .dot { width: 3rem; height: 3rem; }
+    .firstCircle { top: 33%; left: 56%; }
+    .secondCircle { top: 37%; left: 56%; }
+    .thirdCircle { top: 41%; left: 56%; }
+    .rectangle { height: 14rem; width: 4rem; top: 33%; left: 58.3%; }
+    .rectangle2 { height: 14rem; width: 2rem; top: 48.5%; left: 58.3%; }
+}
+
+/* Samsung Galaxy Tab S8 Ultra */
+@media only screen and (min-width: 912px) and (min-height: 1368px) {
+    .dot { width: 3rem; height: 3rem; }
+    .firstCircle { top: 33%; left: 56.7%; }
+    .secondCircle { top: 37%; left: 56.7%; }
+    .thirdCircle { top: 41%; left: 56.7%; }
+    .rectangle { height: 14rem; width: 4rem; top: 33%; left: 59.3%; }
+    .rectangle2 { height: 14rem; width: 2rem; top: 48.5%; left: 59.3%; }
+}
+/* Surface duo */
+@media only screen and (min-width: 540px) and (max-width: 720px) and (min-height: 720px) and (max-height: 960px) {
+    .dot { width: 1.5rem; height: 1.5rem; }
+    .firstCircle { top: 32%; left: 55.7%; }
+    .secondCircle { top: 36%; left: 55.7%; }
+    .thirdCircle { top: 40%; left: 55.7%; }
+    .rectangle { height: 7.6rem; width: 2rem; top: 33%; left: 58%; }
+    .rectangle2 { height: 7.5rem; width: 1rem; top: 48.5%; left: 58%; }
+}
+/*Galaxy Z fold 5*/
+@media only screen and (min-width: 344px) and (max-width: 400px) and (min-height: 882px) and (max-height: 900px) {
+    .dot { width: 2rem; height: 2rem; }
+    .firstCircle { top: 32%; left: 61.3%; }
+    .secondCircle { top: 36%; left: 61.3%; }
+    .thirdCircle { top: 40%; left: 61.3%; }
+    .rectangle { height: 9rem; width: 2.6rem; top: 33%; left: 66%; }
+    .rectangle2 { height: 9rem; width: 1.2rem; top: 48.5%; left: 66%; }
+}
+/*Asus Zenbook Fold*/
+@media only screen and (min-width: 853px) and (max-width: 900px) and (min-height: 1280px) and (max-height: 1300px) {
+    .dot { width: 2.5rem; height: 2.5rem; }
+    .firstCircle { top: 33%; left: 56.6%; }
+    .secondCircle { top: 37%; left: 56.6%; }
+    .thirdCircle { top: 41%; left: 56.6%;}
+    .rectangle { height: 13.5rem; width: 3.5rem; top: 33%; left: 59%; }
+    .rectangle2 { height: 15rem; width: 1.6rem; top: 46%; left: 59%; }
+}
+
+/*Samsung Galaxy A51/71*/
+@media (width: 412px) and (height: 914px) {
+    .dot { width: 2.1rem; height: 2.1rem; }
+    .firstCircle { top: 33%; left: 60%; }
+    .secondCircle { top: 37%; left: 60%; }
+    .thirdCircle { top: 41%; left: 60%;}
+    .rectangle { height: 9.5rem; width: 3.2rem; top: 33.5%; left: 64%; }
+    .rectangle2 { height: 11rem; width: 1.4rem; top: 46%; left: 64%; }
+}
+/*Nest Hub*/
+@media (width: 1024px) and (height: 600px) {
+    .dot { width: 2.1rem; height: 2.1rem; }
+    .firstCircle { top: 24%; left: 54.3%; }
+    .secondCircle { top: 30%; left: 54.3%; }
+    .thirdCircle { top: 36%; left: 54.3%;}
+    .rectangle { height: 9.5rem; width: 3.1rem; top: 24%; left: 56%; }
+    .rectangle2 { height: 11rem; width: 1.4rem; top: 46%; left: 56%; }
+}
+/*Nest Hub Max*/
+@media (width: 1280px) and (height: 800px) {
+    .dot { width: 3rem; height: 3rem; }
+    .firstCircle { top: 24%; left: 54.14%;}
+    .secondCircle { top: 31%; left: 54.14%;}
+    .thirdCircle { top: 38%; left: 54.14%;}
+    .rectangle { height: 12.8rem; width: 3.8rem; top: 24%; left: 56%; }
+    .rectangle2 { height: 13rem; width: 1.5rem; top: 48%; left: 56%; }
+}
+
+/*opera gx with a 1920 x 1200 resolution*/
+@media (min-width: 1876px) {
+    .dot { width: 4.5rem; height: 4.5rem; }
+    .firstCircle { top: 21%; left: 54.1%; }
+    .secondCircle { top: 29%; left: 54.1%; }
+    .thirdCircle { top: 37%; left: 54.1%; }
+    .rectangle { height: 20rem; width: 5.5rem; top: 20%; left: 56%; }
+    .rectangle2 { height: 20rem; width: 3rem; top: 46%; left: 56%; }
+}
+/*opera gx with a 2560 x 1440 resolution*/
+@media (min-width: 2516px) {
+    .dot { width: 6rem; height: 6rem; }
+    .firstCircle { top: 18%; left: 54.1%; }
+    .secondCircle { top: 27%; left: 54.1%; }
+    .thirdCircle { top: 36%; left: 54.1%; }
+    .rectangle { height: 26rem; width: 7.5rem; top: 18%; left: 56%; }
+    .rectangle2 { height: 30rem; width: 4rem; top: 42%; left: 56%; }
+}
+/*Opera gx 4k aprox resolution*/
+@media (min-width: 3740px) {
+    .dot { width: 8rem; height: 8rem; }
+    .firstCircle { top: 25%; left: 54.3%; }
+    .secondCircle { top: 32%; left: 54.3%; }
+    .thirdCircle { top: 39%; left: 54.3%; }
+    .rectangle { height: 36rem; width: 11rem; top: 23%; left: 56%; }
+    .rectangle2 { height: 37rem; width: 5rem; top: 48.5%; left: 56%; }
+}

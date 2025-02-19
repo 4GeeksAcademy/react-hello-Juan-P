@@ -1,13 +1,9 @@
-//import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "../styles/index.css";  // Asegúrate de que los estilos están bien importados
+import Home from "./component/Home.jsx";  // Importa Home
 
-// include your styles into the webpack bundle
-import "../styles/index.css";
+// Renderiza Home (o cambia a TrafficLight si quieres verlo en su lugar)
+ReactDOM.createRoot(document.getElementById('app')).render(<Home />);
 
-//import your own components
-import Home from "./component/home.jsx";
-
-//render your react application
-ReactDOM.createRoot(document.getElementById('app')).render(<Home/>);
 
