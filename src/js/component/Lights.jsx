@@ -3,7 +3,7 @@ import React from "react";
 export default function Lights({ time, color, index, handleClick }) {
   return (
     <section>
-      {/* Círculos */}
+      {/* Circles */}
       <div
         className="dot firstCircle"
         style={{
